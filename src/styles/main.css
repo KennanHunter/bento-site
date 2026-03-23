@@ -50,10 +50,10 @@
     z-index: 2;
     width: 300px;
     line-height: 105px;
-    transform: rotate(-6.729deg);
+    transform: rotate(6.729deg);
     border-radius: 100px;
-    background-color: #ff0000;
-    box-shadow: -4px 4px 0 0 rgb(160, 0, 0);
+    background-color: #0000ff;
+    box-shadow: -4px 4px 0 0 rgb(2, 7, 90);
     top: 47%;
     left: 38%;
     border: none;
@@ -62,8 +62,8 @@
     text-decoration: none;
   }
   .rsvp:hover {
-    background-color: #ff9191;
-    box-shadow: -4px 4px 0 0 #ff0000;
+    background-color: #ff0000;
+    box-shadow: -4px 4px 0 0 #740000;
     
   }
   a:hover{
@@ -111,12 +111,16 @@
     transform:rotate(-15deg);
     line-height: 30px;
     border-radius: 100px;
-    background-color: #ff0000;
-    box-shadow: -4px 4px 0 0 rgb(160, 0, 0);
+    background-color: #0000ff;
+    box-shadow: -4px 4px 0 0 rgb(2, 7, 90);
     top: 90%;
     left: 60%;
     border: none;
     color: white;
     text-align: center;
     text-decoration: none;
+  }
+  .speaker:hover {
+    background-color: #ff0000;
+    box-shadow: -4px 4px 0 0 #740000;
   }
