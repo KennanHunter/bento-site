@@ -3,11 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/main.css";
 import Bento from "../components/bento.astro";
 import { Dithering } from "@paper-design/shaders-react";
-import Sticker from "../components/sticker.astro";
 import Loader from "../components/loader.astro";
 import { Image } from "astro:assets";
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+
+import blob1 from "../assets/blobs/blob1.svg";
+import blob2 from "../assets/blobs/blob2.svg";
+import blob3 from "../assets/blobs/blob3.svg";
+import logo_stick from "../assets/blobs/logo_stick.svg";
+import topic_robin from "../assets/topics/robin.webp";
+import topic_cube from "../assets/topics/cube.webp";
+import topic_ferris from "../assets/topics/ferris.webp";
 ---
 
 <Layout>
@@ -15,13 +20,57 @@ import { Image } from "astro:assets";
     <p slot="hi" class="load">loading...</p>
   </Loader>
   <a href="/hi/" title="rsvp for bento!" class="rsvp noselect">rsvp</a>
-  <img width="150px" height="auto"  can-move class="sticker" src="/./blobs/blob1.svg" />
-  <img width="150px" height="auto" can-move class="sticker" src="/./blobs/blob2.svg" />
-  <img width="150px" height="auto" can-move class="sticker" src="/./blobs/blob3.svg" />
-  <img width="150px" height="auto" can-move class="sticker logo" src="/./blobs/logo_stick.svg" />
-  <img width="150px" height="auto" can-move class="topic" src="/./topics/robin.webp" />
-  <img width="150px" height="auto" can-move class="topic" src="/./topics/cube.webp" />
-  <img width="150px" height="auto" can-move class="topic" src="/./topics/ferris.webp" />
+  <Image
+    width={300}
+    alt={""}
+    class="sticker"
+    src={blob1}
+    {...{ "can-move": true } as any}
+  />
+  <Image
+    width={300}
+    alt={""}
+    class="sticker"
+    src={blob2}
+    {...{ "can-move": true } as any}
+  />
+  <Image
+    width={300}
+    alt={""}
+    class="sticker"
+    src={blob3}
+    {...{ "can-move": true } as any}
+  />
+  <Image
+    width={300}
+    alt={""}
+    class="sticker logo"
+    src={logo_stick}
+    {...{ "can-move": true } as any}
+  />
+  <Image
+    width={300}
+    alt={""}
+    class="topic"
+    src={topic_robin}
+    {...{ "can-move": true } as any}
+  />
+  <Image
+    width={300}
+    alt={""}
+    class="topic"
+    src={topic_cube}
+    {...{ "can-move": true } as any}
+  />
+  <Image
+    width={300}
+    alt={""}
+    can-move
+    class="topic"
+    src={topic_ferris}
+    {...{ "can-move": true } as any}
+  />
+
   <Bento>
     <div class="top-right noselect" slot="top-right">
       <p title="seen the show? now hear the tell">
@@ -48,7 +97,11 @@ import { Image } from "astro:assets";
       <br />
       You only need a title and a topic to sign-up. That's it!
     </p>
-    <a href="https://purduehackers.notion.site/BENTO-Presentation-Guidelines-317181f3b6ed80789af0f349d89fbba7" class="speaker" slot="l-vertical">be a speaker</a>
+    <a
+      href="https://purduehackers.notion.site/BENTO-Presentation-Guidelines-317181f3b6ed80789af0f349d89fbba7"
+      class="speaker"
+      slot="l-vertical">be a speaker</a
+    >
     <p class="bottom-left noselect" slot="bottom-left">topics include:</p>
     <p class="noselect top-left" slot="top-left">6-9 PM April 11 KRAN 140</p>
   </Bento>
