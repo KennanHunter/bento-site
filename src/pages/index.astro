@@ -10,9 +10,9 @@ import Loader from "../components/loader.astro";
 ---
 
 <Layout>
-<Loader>
-	<p slot="hi" class="load">loading...</p>
-</Loader>
+  <Loader>
+    <p slot="hi" class="load">loading...</p>
+  </Loader>
   <a href="" title="rsvp for bento!" class="rsvp noselect">rsvp</a>
   <img can-move class="sticker" src="/./blobs/blob1.svg" />
   <img can-move class="sticker" src="/./blobs/blob2.svg" />
@@ -47,7 +47,7 @@ import Loader from "../components/loader.astro";
       <br />
       You only need a title and a topic to sign-up. That’s it!
     </p>
-    <button slot="l-vertical">be a speaker</button>
+    <!-- <button slot="l-vertical">be a speaker</button> -->
     <p class="bottom-left noselect" slot="bottom-left">topics include:</p>
     <p class="noselect top-left" slot="top-left">6-9 PM April 11 KRAN 140</p>
   </Bento>
@@ -69,20 +69,19 @@ import Loader from "../components/loader.astro";
   </div>
 
   <div class="background"></div>
-  <script type="module" src="https://unpkg.com/playhtml@latest/dist/init.es.js"
-  >
-  playhtml.init({
-  cursors: {
-    enabled: true,
-    room: "domain", // Show cursors across entire site
-    shouldRenderCursor: (presence) => {
-      // Only render cursors from same page
-      return presence.page === window.location.pathname;
-    },
-  },
-});
+  <script type="module" src="https://unpkg.com/playhtml@latest/dist/init.es.js">
+    playhtml.init({
+      cursors: {
+        enabled: true,
+        room: "domain", // Show cursors across entire site
+        shouldRenderCursor: (presence) => {
+          // Only render cursors from same page
+          return presence.page === window.location.pathname;
+        },
+      },
+    });
 
-// Access global presence data
-const userCount = window.cursors.allColors.length;
-</script>
+    // Access global presence data
+    const userCount = window.cursors.allColors.length;
+  </script>
 </Layout>
