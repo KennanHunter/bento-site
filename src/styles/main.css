@@ -64,7 +64,7 @@
   .rsvp:hover {
     background-color: #ff9191;
     box-shadow: -4px 4px 0 0 #ff0000;
-    cursor: url(public/cursors/link.cur), pointer;
+    cursor: url(/./cursors/link.cur), pointer;
   }
 
   .noselect {
